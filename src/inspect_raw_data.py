@@ -39,7 +39,6 @@ for sheet in excel_file.sheet_names:
     print("\nShape:", df.shape)
     print("Rows:", rows)
     print("Columns:", columns)
-
     total_rows += rows
 
     # Column names
@@ -56,13 +55,10 @@ for sheet in excel_file.sheet_names:
 
     # Missing values
     missing_values = df.isna().sum()
-
     print("\nMissing Values:")
     print(missing_values)
-
     total_missing = int(missing_values.sum())
     total_missing_all += total_missing
-
     print("Total Missing Cells:", total_missing)
 
     # Duplicate rows
@@ -75,7 +71,6 @@ for sheet in excel_file.sheet_names:
         df["InvoiceDate"],
         errors="coerce"
     )
-
     print("\nEarliest Date:", dates.min())
     print("Latest Date:", dates.max())
     print("Invalid Dates:", int(dates.isna().sum()))
@@ -85,10 +80,7 @@ for sheet in excel_file.sheet_names:
 
 excel_file.close()
 
-# ------------------------------------------
 # STEP 4: Workbook-level summary
-# ------------------------------------------
-
 print("\n" + "=" * 60)
 print("OVERALL WORKBOOK SUMMARY")
 print("=" * 60)
