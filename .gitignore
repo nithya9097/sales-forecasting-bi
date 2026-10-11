@@ -1,0 +1,22 @@
+
+# Python environment
+.venv/
+__pycache__/
+*.py[cod]
+
+# Raw and processed data
+data/raw/*
+data/processed/*
+
+# Model artifacts
+models/*
+
+# Secrets
+.env
+
+# Local files
+desktop.ini
+.DS_Store
+Thumbs.db
+.vscode/
+.ipynb_checkpoints/
